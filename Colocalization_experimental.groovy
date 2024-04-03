@@ -1,4 +1,6 @@
-//0.2.0, but null pointer exception in certain image types. Have not been able to track it down.
+//function created by MicroscopyRA (@Svidro) and posted to the image.sc forum April 2019
+//accessed at: https://forum.image.sc/t/if-colocalization-calculations-for-qupath-updated-to-0-3-2/25165
+
 //****************VALUES TO EDIT***********//
 
 //Channel numbers are based on cell measurement/channel order in Brightness/contrast menu, starting with 1
