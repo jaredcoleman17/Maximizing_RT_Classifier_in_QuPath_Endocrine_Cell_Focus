@@ -1,5 +1,4 @@
-//function adapted from Michael Guyot (@ym.lim) and posted to 
-//accessed at: https://
+//function adapted from Michael Guyot (@mguyot1), orginally posted to https://github.com/mguyot1
 
 //import statements
 import java.util.ArrayList;
