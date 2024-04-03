@@ -1,5 +1,13 @@
+//function adapted from Michael Guyot (@ym.lim) and posted to 
+//accessed at: https://
+
 //import statements
 import java.util.ArrayList;
+
+//remove cells that you want excluded from testing region
+//class name in getPathClass must be changed accordingly
+toRemove = getCellObjects().findAll{it.getPathClass() == getPathClass("")}
+removeObjects(toRemove,true)
 
 //get number of objects (equal to the number of cells)
 cells = getCellObjects()
@@ -10,7 +18,23 @@ imageData = getCurrentImageData();
 def hierarchy = getCurrentHierarchy()
 
 //define classifier going to test validity of (NEED TO CHANGE THIS STRING WHEN CHANGING CLASSIFIER OF INTEREST)
-def classifier = loadObjectClassifier('endo_vs_exo_vasc')
+def classifier = loadObjectClassifier('')
+//classifer names for this project are as follows
+// Aim1_PancreasA_180_cells
+// Aim1_PancreasA_200_cells
+// Aim1_PancreasA_380_cells
+// Aim1_PancreasA_415_cells
+// Aim1_PancreasA_467_cells
+// Aim1_PancreasA_513_cells
+// Aim1_PancreasA_582_cells
+
+// Aim2_PancreasA
+// Aim2_PancreasB
+// Aim2_PancreasC
+// Aim2_PancreasA_B
+// Aim2_PancreasA_C
+// Aim2_PancreasB_C
+// Aim2_PancreasA_B_C
 
 //apply classifier (will change the class of each cell)
 classifier.classifyObjects(imageData, cells, true)
